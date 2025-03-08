@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.set-content {
+  width: 117rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  background-color: #fffcf4;
+  padding-top: 3.6rem;
+  padding-bottom: 6.5rem;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__nav--list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  column-gap: 4.2rem;
+}
+.header__nav--listItem {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  position: relative;
+}
+.header__nav--listItem:hover {
+  color: #171100;
+  font-weight: 600;
+}
+.header__nav--listItem:hover::after {
+  opacity: 1;
+}
+.header__nav--listItem::after {
+  content: "";
+  position: absolute;
+  width: 1.2rem;
+  height: 2px;
+  background-color: #171100;
+  bottom: 0;
+  left: 0;
+  border-radius: 1px;
+  opacity: 0;
+}
+.header__nav--listItemSignup {
+  margin-left: 2.8rem;
+  padding: 1.1rem 4.1rem;
+  background-color: #171100;
+  border-radius: 24.5px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6.4rem;
+}
+.header__content--img {
+  width: 40.1709401709%;
+  border-radius: 2rem;
+  height: 685px;
+  object-fit: cover;
+}
+.header__content--texts {
+  width: 40.1709401709%;
+}
+.header__content--textsTitle {
+  color: #171100;
+  font-family: Sen;
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 6.8rem;
+  letter-spacing: -1.16px;
+}
+.header__content--textsDesc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+  margin-top: 2.2rem;
+}
+.header__content--textsBtns {
+  margin-top: 3.8rem;
+  display: flex;
+  column-gap: 2.8rem;
+  align-items: center;
+}
+.header__content--textsBtnsCourses {
+  background-color: #ffb900;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: #fff;
+  padding: 1.7rem 3.3rem 1.7rem 3.4rem;
+  border-radius: 3.2rem;
+}
+.header__content--textsBtnsWatch {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 3rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1.4rem;
+}
+.header__content--textsBtnsWatchIcon {
+  width: 4rem;
+  height: 4rem;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__content--textsCount {
+  margin-top: 4.8rem;
+}
+.header__content--textsCountTitle {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+.header__content--textsCountList {
+  margin-top: 8px;
+  display: flex;
+  column-gap: 2.8rem;
+}
+.header__content--textsCountListItem {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+.header__content--textsCountListItem span {
+  font-family: Sen;
+  color: #171100;
+  font-size: 4.4rem;
+  line-height: 5.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .set-content {
+    width: 769px;
+  }
+  .header__nav--list {
+    column-gap: 3rem;
+  }
+  .header__nav--listItem {
+    font-size: 1.4rem;
+  }
+  .header__nav--listItemSignup {
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    padding: 8px 3.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,202 @@
+@use './variables' as var;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap');
+
+@import './reset';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.set-content {
+  width: 117rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// header
+.header {
+  background-color: var.$color-bg-yellow;
+  padding-top: 3.6rem;
+  padding-bottom: 6.5rem;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    &--list {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      column-gap: 4.2rem;
+      &Item {
+        color: var.$color-text-second;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.8rem;
+        position: relative;
+
+        &:hover {
+          color: var.$color-text-primary;
+          font-weight: 600;
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1.2rem;
+          height: 2px;
+          background-color: var.$color-text-primary;
+          bottom: 0;
+          left: 0;
+          border-radius: 1px;
+          opacity: 0;
+        }
+
+        &Signup {
+          margin-left: calc(7rem - 4.2rem);
+          padding: 1.1rem 4.1rem;
+          background-color: var.$color-text-primary;
+          border-radius: 24.5px;
+          color: #fff;
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6.4rem;
+
+    &--img {
+      width: 40.17094017094017%;
+      border-radius: 2rem;
+      height: 685px;
+      object-fit: cover;
+    }
+
+    &--texts {
+      width: 40.17094017094017%;
+
+      &Title {
+        color: var.$color-text-primary;
+        font-family: Sen;
+        font-size: 5.8rem;
+        font-weight: 700;
+        line-height: 6.8rem;
+        letter-spacing: -1.16px;
+      }
+
+      &Desc {
+        color: var.$color-text-second;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 3rem;
+        margin-top: 2.2rem;
+      }
+
+      &Btns {
+        margin-top: 3.8rem;
+        display: flex;
+        column-gap: 2.8rem;
+        align-items: center;
+
+        &Courses {
+          background-color: var.$color-btn-yellow;
+          font-size: 1.8rem;
+          font-weight: 600;
+          line-height: 3rem;
+          color: #fff;
+          padding: 1.7rem 3.3rem 1.7rem 3.4rem;
+          border-radius: 3.2rem;
+        }
+
+        &Watch {
+          font-size: 1.8rem;
+          font-weight: 600;
+          line-height: 3rem;
+          display: flex;
+          align-items: center;
+          column-gap: 1.4rem;
+
+          &Icon {
+            width: 4rem;
+            height: 4rem;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      &Count {
+        margin-top: 4.8rem;
+        &Title {
+          color: var.$color-text-second;
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 3rem;
+        }
+
+        &List {
+          margin-top: 8px;
+          display: flex;
+          column-gap: 2.8rem;
+
+          &Item {
+            color: var.$color-text-second;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 3rem;
+            span {
+              font-family: Sen;
+              color: var.$color-text-primary;
+              font-size: 4.4rem;
+              line-height: 5.4rem;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//responsive
+
+@media screen and (max-width: 1024px) {
+  .set-content {
+    width: 769px;
+  }
+
+  .header {
+    &__nav {
+      &--list {
+        column-gap: 3rem;
+        &Item {
+          font-size: 1.4rem;
+          &Signup {
+            margin-left: 2rem;
+            font-size: 1.4rem;
+            padding: 8px 3.5rem;
+          }
+        }
+      }
+    }
+  }
+}
